@@ -3,11 +3,12 @@ import { GiTie } from 'react-icons/gi'
 import { GoLocation } from 'react-icons/go'
 import { BiEnvelope } from 'react-icons/bi'
 import { BsTelephoneForward } from 'react-icons/bs'
+import Image from 'next/image'
 
 const Sidebar = () => {
     return (
         <>
-        <img
+        <Image
            src='https://avatars.githubusercontent.com/u/70193687?v=4'
            alt='avatar'
            className=' mx-auto border rounded-full'
@@ -31,14 +32,14 @@ const Sidebar = () => {
         </a>
 
         {/* Socials */}
-        <div className='flex justify-around w-9/12 mx-auto my-5 text-green md:w-full '>
+        <div className='flex justify-around w-9/12 mx-auto my-5 text-green md:w-full ' aria-label='Facebook'>
            <a href='https://www.facebook.com/iqbalhossan1999/'>
               <AiFillFacebook className='w-8 h-8 cursor-pointer' />
            </a>
-           <a href='https://www.linkedin.com/in/md-iqbal-hossan-3148161b8/'>
+           <a href='https://www.linkedin.com/in/md-iqbal-hossan-3148161b8/' aria-label='LinkdIn'>
               <AiFillLinkedin className='w-8 h-8 cursor-pointer' />
            </a>
-           <a href='https://github.com/iqbalhossan99'>
+           <a href='https://github.com/iqbalhossan99' aria-label='GitHub'>
               <AiFillGithub className='w-8 h-8 cursor-pointer' />{' '}
            </a>
         </div>

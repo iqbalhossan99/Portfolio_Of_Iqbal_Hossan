@@ -1,9 +1,13 @@
+import Head from "next/head";
 import Bar from "../components/Bar";
 import { languages, tools } from "../data";
 
 const Resume = () => {
   return (
     <div className="px-6 py-2">
+      <Head>
+        <title>Web Developer | Resume | Iqbal</title>
+      </Head>
       {/* //! Education & Experience */}
       <div className="grid gap-6 md:grid-cols-2">
         <div>
