@@ -28,7 +28,7 @@ const Resume = () => {
           <div className="">
             <h5 className="my-2 text-xl font-bold">Software Developer Jr.</h5>
             <p className="font-semibold">Tata Consultancy Services</p>
-            <p className="my-3">I don't know why I am doing this job</p>
+            <p className="my-3">{`I don't know why I am doing this job`}</p>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@ const Resume = () => {
       <div className="grid gap-9 md:grid-cols-2">
         {/* Languages */}
         <div>
-          <h5 className="my-3 text-2xl font-bold">Language & Framework</h5>
+          <h5 className="my-3 text-2xl font-bold">{`Language & Framework`}</h5>
           <div className="my-2">
             {languages.map((language, i) => (
               <Bar value={language} key={i} />
@@ -46,7 +46,7 @@ const Resume = () => {
         </div>
         {/* Tools */}
         <div>
-          <h5 className="my-3 text-2xl font-bold">Tools & Softwares</h5>
+          <h5 className="my-3 text-2xl font-bold">{`Tools & Softwares`}</h5>
           <div className="my-2">
             {tools.map((tool, i) => (
               <Bar value={tool} key={i} />

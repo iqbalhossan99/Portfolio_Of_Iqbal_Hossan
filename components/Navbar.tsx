@@ -34,7 +34,7 @@ const Navbar = () => {
         if(pathname === '/resume'){
             setActiveItem('Resume')
         }
-    },[])
+    },[pathname])
 
 
     
