@@ -7,7 +7,7 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" />
       </Head>
-      <body className='bg-gradient-to-r from-green-500 to-blue-500'>
+      <body className='bg-gradient-to-r from-green to-blue-500'>
         <Main />
         <NextScript />
       </body>
