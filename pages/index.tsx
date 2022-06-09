@@ -5,17 +5,14 @@ const index = () => {
   return (
     <div className="flex flex-col flex-grow px-6 pt-1 ">
     <h6 className="my-3 text-base font-medium">
-      I am currently pursuing B.Tech Degree(Final Year) in Computer Science
-      Engineering from Academy of Technology. I have 3+ years of experience in
-      Web Development and I have a Youtube Channel where I teach Full Stack
-      Web Development
+    Hi! This is Iqbal Hossan. Currently, I have completed my Diploma in Electronics Engineering from Lakshmipur Polytechnic Institute. I have deep interest in Development and also I have completed my MERN Stack Web Development training from Programming Hero. I have 1+ years of experience in Web Development and part freelancer at fiverr.
     </h6>
     <div
       className="flex-grow bg-gray-200 p-4 mt-5"
       style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
     >
       <h2 className="my-3 text-xl font-bold tracking-wide">
-        What I am doing
+        What would I offer!
       </h2>
 
       <div className="grid gap-6 my-3 md:grid-cols-2">
