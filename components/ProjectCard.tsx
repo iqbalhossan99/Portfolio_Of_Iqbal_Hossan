@@ -84,7 +84,7 @@ const ProjectCard: FunctionComponent<{
           </div>
 
           <button
-            onClick={() => setShowDetail(false)}
+            onClick={() => setShowDetail(null)}
             className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-dark-200"
           >
             <MdClose size={30} />
