@@ -7,8 +7,11 @@ import Image from "next/image";
 
 const ProjectCard: FunctionComponent<{
   project: IProject;
+  showDetail: number | null;
+  setShowDetail:(id: number | null) => void;
 }> = ({
   project: {
+    id,
     name,
     image_path,
     category,
@@ -17,8 +20,10 @@ const ProjectCard: FunctionComponent<{
     github_url,
     key_techs,
   },
+  showDetail,
+  setShowDetail
 }) => {
-  const [showDetail, setShowDetail] = useState(false);
+  // const [showDetail, setShowDetail] = useState(false);
 
   return (
     <div>
@@ -26,31 +31,26 @@ const ProjectCard: FunctionComponent<{
         src={image_path}
         alt={name}
         className="cursor-pointer"
-        onClick={() => setShowDetail(true)}
+        onClick={() => setShowDetail(id)}
         layout="responsive"
         height="150"
         width="300"
       />
-      {/* <img
-        src={image_path}
-        alt={name}
-        className="cursor-pointer"
-        onClick={() => setShowDetail(true)}
-      /> */}
       <p className="my-2 text-center">{name}</p>
 
-      {showDetail && (
-        <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
+      {showDetail === id && (
+        <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded md:grid-cols-2 gap-x-12">
           <div>
             {/* <img src={image_path} alt={name} /> */}
-
+            <div className="border-4 border-gray-100">
             <Image
               src={image_path}
               alt={name}
               layout="responsive"
               height="150"
               width="300"
-            />
+              />
+              </div>
             <div className="flex justify-center my-4 space-x-3">
               <a
                 href={github_url}

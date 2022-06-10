@@ -4,10 +4,14 @@ import ProjectsNavbar from "../components/ProjectsNavbar";
 import { projects as projectsData } from "../data";
 import { Category } from "../type";
 import Head from "next/head";
+import {motion} from "framer-motion";
+import { fadeInUp, stagger } from "../animation";
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData);
   const [active, setActive] = useState("all");
+
+  const [showDetail, setShowDetail] = useState< number | null>(null);
 
   const handlerFilterCategory = (category: Category | "all") => {
     if (category === "all") {
@@ -33,13 +37,14 @@ const Projects = () => {
         active={active}
       />
 
-      <div className="relative grid grid-cols-12 gap-4 my-3">
+      <motion.div variants={stagger} initial="initial" animate="animate" className="relative grid grid-cols-12 gap-4 my-3">
+        {/* children's initial and animate property should be same as the parent during a stagger effect  */}
         {projects.map((project, i) => (
-          <div key={i} className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200">
-            <ProjectCard project={project}  />
-          </div>
+          <motion.div variants={fadeInUp} key={i} className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200">
+            <ProjectCard project={project}  showDetail={showDetail} setShowDetail={setShowDetail}/>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
