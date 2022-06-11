@@ -1,5 +1,5 @@
 
-import { IProject, Service, Skill } from "./type";
+import { Blogs, IProject, Service, Skill } from "./type";
 
 import { RiComputerLine } from "react-icons/ri";
 import { FaServer } from "react-icons/fa";
@@ -13,7 +13,7 @@ export const services:Service[] = [
         Icon: RiComputerLine,
         title: "Frontend Development",
         about:
-          "I can build a beautiful and scalable SPA using <b> HTML</b>,<b>CSS</b>   and <b>React.js</b> ",
+          "I can build a beautiful and scalable SPA using <b> HTML</b>,<b>CSS</b>, <b>React.js</b>, <b>Next.js</b> and <b>Jquery</b> ",
       },
       {
         Icon: FaServer,
@@ -25,62 +25,109 @@ export const services:Service[] = [
         Icon: AiOutlineApi,
         title: "API Development",
         about:
-          "I can develop robust  REST API using <b>django-rest-api</b>  & <b>Node API</b> ",
+          "I can develop robust  REST API using <b>Node API</b> ",
       },
+      // {
+      //   Icon: MdDeveloperMode,
+      //   title: "Competitive Coder",
+      //   about: "a daily problem solver in <b>HackerRank</b>  and <b>Leet Code</b> ",
+      // },
+      
       {
-        Icon: MdDeveloperMode,
-        title: "Competitive Coder",
-        about: "a daily problem solver in <b>HackerRank</b>  and <b>Leet Code</b> ",
-      },
-      {
-        Icon: AiOutlineAntDesign,
-        title: "UI/UX designer",
+        Icon: RiComputerLine,
+        title: "Figma & PSD to HTML ",
         about:
-          "stunning user interface designer using <b>Figma</b>  and  <b>Framer</b> ",
+          "Convert Figma & PSD to html template using <b> HTML</b>,<b>CSS</b>, <b>SASS</b>, <b>Bootstrap</b>,<b>Jquery</b> & other popular frameworks",
       },
       {
         Icon: RiComputerLine,
-        title: "Whatever",
+        title: "Wordpress Customization",
         about:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis minima autem!",
+          "Create lucrative & high performance wordpress website using any kind of  <b> Theme & Page Builder</b>",
+      },
+      {
+        Icon: AiOutlineAntDesign,
+        title: "Electrical Circuit Design",
+        about:
+          "High performance Circuit Design using <b>Autocade</b>  and  <b>Scratch Up</b> ",
       },
     ];
     
   
 export const languages: Skill[] = [
-  {
-    Icon: BsCircleFill,
-    name: "Python",
-    level: "45",
-  },
+  // {
+  //   Icon: BsCircleFill,
+  //   name: "Python",
+  //   level: "45",
+  // },
   {
     Icon: BsCircleFill,
     name: "Java Script",
-    level: "60",
+    level: "90",
   },
   {
     Icon: BsCircleFill,
-    name: "React Native",
-    level: "80",
-  },
-  {
-    Icon: BsCircleFill,
-    name: "React",
+    name: "TypeScript",
     level: "70",
   },
   {
     Icon: BsCircleFill,
-    name: "Django",
+    name: "React ",
+    level: "90",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "React Query ",
+    level: "70",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Next ",
+    level: "60",
+  },
+  // {
+  //   Icon: BsCircleFill,
+  //   name: "React Native",
+  //   level: "40",
+  // },
+  {
+    Icon: BsCircleFill,
+    name: "Jquery",
+    level: "70",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Node",
     level: "80",
   },
   {
     Icon: BsCircleFill,
-    name: "Bootstrap",
-    level: "80",
+    name: "Express",
+    level: "90",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "MongoDB",
+    level: "90",
   },
 ];
 
 export const tools: Skill[] = [
+  {
+    Icon: BsCircleFill,
+    name: "git",
+    level: "85",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Firebase",
+    level: "65",
+  },
+  {
+    Icon: BsCircleFill,
+    name: "Netlify",
+    level: "85",
+  },
   {
     Icon: BsCircleFill,
     name: "Figma",
@@ -104,111 +151,77 @@ export const tools: Skill[] = [
 ];
 
 export const projects: IProject[] = [
-  { 
+  
+  {
     id:1,
-    name: "COVID Tracker",
+    name: "Manufacture App",
+    image_path: "/images/new_img/manufacture_app.png",
+    deployed_url: "https://assignment-12-ab83a.web.app/",
+    github_client_side: "https://github.com/iqbalhossan99/Manufacturer-Website-Client-Side",
+    github_server_side: "https://github.com/iqbalhossan99/Manufacturer_Website_Server_Side",
+    category: ["react", "mongo", "node"],
     description:
-      "This app shows a statistical view about corona virus over the world",
-    image_path: "/images/covid.jpg",
-    deployed_url: "https://covid-19-tracker-by-sumit.web.app/",
-    github_url: "https://github.com/Dey-Sumit/covid-19-tracker",
-    category: ["react"],
-    key_techs: ["React", "Chart.js", "Material UI"],
-  },
-  {    
+    ` ● Visit beautiful Global Manufacturer and without
+      login/register not possible to make order it, review it as
+      users. 
+      ● Dashboard orders are stored in the database, make
+      payment and you may delete it as users.  </br>
+      ● Admin handles all users’ orders, he/she updates status and
+      deletes it, adds parts/products, and also admin makes
+      another admin. `,
+    key_techs: ["React", "React Query", "Firebase Auth", "Stripe Payment Method","JWT", "Node API", "Express", "MongoDB",],
+  }, 
+  {
     id:2,
-    name: "Algorithm Visualizer",
-    image_path: "/images/algoVisual.png",
-    deployed_url: "https://visual-algorithm.web.app/",
-    github_url: "https://github.com/Dey-Sumit/algorithm-visualizer",
-    category: ["react"],
+    name: "WareHouse App",
+    image_path: "/images/new_img/warehouse.jpg",
+    deployed_url: "https://warehouse-management-f437e.web.app/",
+    github_client_side: "https://github.com/iqbalhossan99/Eletronics_WareHouse_Client_Side",
+    github_server_side: "https://github.com/iqbalhossan99/Eletronics_WareHouse_Server_Side",
+    category: ["react", "mongo", "node"],
     description:
-      "An web app which shows how an algorithm (path finding or sorting) works with cool animation",
-    key_techs: ["React", "firebase", "Framer Motion"],
+    `● Beautiful Electronics warehouse visit and after login/register
+    you can stock items quantity and also deliver on the inventory
+    page. \n
+    ● Add items to the Add item page with your name which is stored
+    in MongoDB.\n
+    ● Manage your items on my item page and you can delete them
+    with confirmation.`,
+    key_techs: ["React", "React Query", "Firebase Auth", "Stripe Payment Method","JWT", "Node API", "Express", "MongoDB",],
   },
-
   {
     id:3,
-    name: "Dev Talks",
-    image_path: "/images/dev.jpg",
-    deployed_url: "https://dev-talks.herokuapp.com/",
-    github_url: "https://github.com/Dey-Sumit/Dev-talks",
-    category: ["node", "mongo", "react"],
+    name: "Netflix Clone",
+    image_path: "/images/new_img/netflix.jpg",
+    deployed_url: "",
+    github_client_side: "https://github.com/Next-Hero/Mern-Netflix",
+    github_server_side: "https://github.com/Next-Hero/Mern-Netflix/tree/main/api",    
+    category: ["react", "mongo", "node"],
     description:
-      "Social Media app for developers who can share project,create posts,etc...",
-    key_techs: [
-      "React",
-      "Redux",
-      "Node",
-      "Express",
-      "Mongo",
-      "REST API",
-      "Bootstrap",
-    ],
+      'Full(almost) Functional Netflix replica where one can login with his/her login info to enjoy. User can like a video,comment on a video & Much More. </br> Admin would monetize new user, make admin, add series, etc on the admin dashboard.',
+    key_techs: ["React", "React Query", "Firebase Auth","JWT", "Node API", "Express", "MongoDB",],
   },
-
   {
     id:4,
-    name: "Realtime Chat App",
-    image_path: "/images/chatapp.jpg",
-    deployed_url: "https://sumit-chat.netlify.app/",
-    github_url: "https://github.com/Dey-Sumit/chat-app-socket.io-react-node",
-    category: ["node", "react"],
+    name: "Developer Portfolio",
+    image_path: "/images/new_img/portfolio_iqbal99.png",
+    deployed_url: "",
+    github_client_side: "https://github.com/iqbalhossan99/Portfolio_Of_Iqbal_Hossan",
+    github_server_side: "",    
+    category: ["react", "next"],
     description:
-      "Basic Realtime Chat App where one can create a room can talk to each other",
-    key_techs: ["React", "Node", "Express", "Socket", "Bootstrap"],
+      '',
+    key_techs: ["React", "Next", "TypeScript"],
   },
-
-  {
-    id:5,
-    name: "Tweeter Clone",
-    image_path: "/images/tweetme.jpg",
-    deployed_url: "http://sumaxtweetme.pythonanywhere.com/",
-    github_url: "https://github.com/Dey-Sumit/tweetme",
-    category: ["node", "react"],
-    description:
-      "First Django Project :) | Typical Social Media App where one can post,like ,comment etc",
-    key_techs: ["React", "Django", "Django REST API"],
-  },
-
-  {
-    id:6,
-    name: "Color Classification using tf.js",
-    image_path: "/images/color.jpg",
-    deployed_url: "!#",
-    github_url: "https://github.com/Dey-Sumit/color-classification",
-    category: ["express"],
-    description:
-      "Tried ML with JS :) | this app classifies a color using CNN algorithm in browser",
-    key_techs: ["Express", "TensorFlow.js", "Vanilla js"],
-  },
-  {
-    id:7,
-    name: "YouTube using YouTube ",
-    image_path: "/images/youtubeClone.png",
-    deployed_url: "https://not-utube.web.app/",
-    github_url: "https://github.com/Dey-Sumit/youtube-clone-tutorial-up",
-    category: ["express"],
-    description:
-      'Full(almost) Functional YouTube replica where one can login with his/her youtube account to enjoy "not-YouTube".User can like a video,comment on a video & Much More ',
-    key_techs: [
-      "React",
-      "Redux",
-      "Firebase Auth",
-      "YouTube API",
-      "Sass",
-      "Bootstrap",
-    ],
-  },
-  {
-    id:8,
-    name: "Football App",
-    image_path: "/images/football.png",
-    deployed_url: "https://o-my-goal.web.app/",
-    github_url: "https://github.com/Dey-Sumit/football-app",
-    category: ["react"],
-    description:
-      "o my goal replica where an user can keep an eye on his favorite club.This app will keep providing \n all the statistics of that club.all the fans can also chat ",
-    key_techs: ["React", "Redux", "Firebase Auth", "API", "Sass", "Bootstrap"],
-  },
+  
 ];
+
+
+export const blogs: Blogs[]=[
+  {id:1,
+    title:"fdsf",
+    description:"",
+    image_path: "/images/algoVisual.png",
+
+  }
+]

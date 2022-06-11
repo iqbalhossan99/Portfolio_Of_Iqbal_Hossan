@@ -20,21 +20,21 @@ const Resume = () => {
           <h5 className="my-3 text-2xl font-bold">Education</h5>
           <div className="">
             <h5 className="my-2 text-xl font-bold">
-              Computer Science Engineering
+              Lakshmipur Polytechnic Institute
             </h5>
-            <p className="font-semibold">Academy of Technology (2017-2021)</p>
+            <p className="text-sm font-semibold text-gray-400">(2017-2021)</p>
             <p className="my-3">
-              I am currently pursuing B.tech in Computer Science Engineering
-              from Academy of Technology
+              I am currently completed Diploma In Electronics Engineering
+              from Lakshmipur Polytechnic Institute.
             </p>
           </div>
         </motion.div>
         <motion.div variants={fadeInUp} initial="initial" animate="animate">
           <h5 className="my-3 text-2xl font-bold">Experience</h5>
           <div className="">
-            <h5 className="my-2 text-xl font-bold">Software Developer Jr.</h5>
-            <p className="font-semibold">Tata Consultancy Services</p>
-            <p className="my-3">{`I don't know why I am doing this job`}</p>
+            <h5 className="my-2 text-xl font-bold">Web Developer at Fiver </h5>
+            <p className="text-sm font-semibold text-gray-400">Web Application services (2020 To Present)</p>
+            <p className="my-3">{`Actually I am doing this job as a part time freelancer`}</p>
           </div>
         </motion.div>
       </div>

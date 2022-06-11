@@ -17,13 +17,13 @@ const ProjectCard: FunctionComponent<{
     category,
     deployed_url,
     description,
-    github_url,
+    github_client_side,
+    github_server_side,
     key_techs,
   },
   showDetail,
   setShowDetail
 }) => {
-  // const [showDetail, setShowDetail] = useState(false);
 
   return (
     <div>
@@ -35,6 +35,7 @@ const ProjectCard: FunctionComponent<{
         layout="responsive"
         height="150"
         width="300"
+        quality="100"
       />
       <p className="my-2 text-center">{name}</p>
 
@@ -53,14 +54,20 @@ const ProjectCard: FunctionComponent<{
               </div>
             <div className="flex justify-center my-4 space-x-3">
               <a
-                href={github_url}
-                className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
+                href={github_client_side}
+                className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 "
               >
-                <AiFillGithub /> <span>Github</span>
+                <AiFillGithub /> <span> Client</span>
+              </a>
+              <a
+                href={github_server_side}
+                className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 "
+              >
+                <AiFillGithub /> <span> Server </span>
               </a>
               <a
                 href={deployed_url}
-                className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 dark:bg-dark-200"
+                className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 "
               >
                 <AiFillProject /> <span>Project</span>
               </a>
@@ -75,7 +82,7 @@ const ProjectCard: FunctionComponent<{
               {key_techs.map((tech) => (
                 <span
                   key={tech}
-                  className="px-2 py-1 my-1 bg-gray-200 dark:bg-dark-200 rounde-sm"
+                  className="px-2 py-1 my-1 bg-gray-200  rounde-sm"
                 >
                   {tech}
                 </span>
@@ -85,7 +92,7 @@ const ProjectCard: FunctionComponent<{
 
           <button
             onClick={() => setShowDetail(null)}
-            className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-dark-200"
+            className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none "
           >
             <MdClose size={30} />
           </button>

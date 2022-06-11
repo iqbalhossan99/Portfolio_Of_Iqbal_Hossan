@@ -11,13 +11,14 @@ const Sidebar = () => {
         <Image
            src='https://avatars.githubusercontent.com/u/70193687?v=4'
            alt='avatar'
-           className=' mx-auto border rounded-full'
+           className='mx-auto border rounded-full '
            height="128px"
            width="128px"
         />
         <h3 className='my-4 text-3xl font-medium tracking-wider font-Kaushan'>
            <span className='text-green'>Iqbal</span> Hossan
         </h3>
+        
         <p className='px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-black-500'>
            Web Developer
         </p>

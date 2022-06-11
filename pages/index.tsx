@@ -15,7 +15,7 @@ const index = () => {
       </Head>
       {/* about text */}
       <h5 className="my-3 text-base font-medium">
-      Hi! This is Iqbal Hossan. Currently, I have completed my Diploma in Electronics Engineering from Lakshmipur Polytechnic Institute. I have deep interest in Development and also I have completed my MERN Stack Web Development training from Programming Hero. I have 1+ years of experience in Web Development and part freelancer at fiverr.
+      Hi! This is Iqbal Hossan. Currently, I have completed my Diploma in Electronics Engineering from Lakshmipur Polytechnic Institute. I have deep interest in Development and also I have completed my MERN Stack Web Development training from Programming Hero. I have 1+ years of experience in Web Development and part time freelancer at fiverr.
       </h5>
     <div
       className="flex-grow p-4 mt-5 bg-gray-200"
