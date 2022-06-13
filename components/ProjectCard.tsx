@@ -25,6 +25,13 @@ const ProjectCard: FunctionComponent<{
   setShowDetail
 }) => {
 
+  //XSS attack :( on our portfolio btw, as an alternate use npm i dom purify
+  function createMarkup() {
+    return {
+       __html: description,
+    }
+ }
+
   return (
     <div>
       <Image
@@ -38,7 +45,9 @@ const ProjectCard: FunctionComponent<{
         quality="100"
       />
       <p className="my-2 text-center">{name}</p>
-
+      <div className="text-center">   
+        <button onClick={() => setShowDetail(id)} className="text-lg bg-gray-300   py-1 px-2 rounded hover:text-green hover:bg-gray-100">Details</button>
+      </div>
       {showDetail === id && (
         <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded md:grid-cols-2 gap-x-12">
           <div>
@@ -54,18 +63,21 @@ const ProjectCard: FunctionComponent<{
               </div>
             <div className="flex justify-center my-4 space-x-3">
               <a
+                target="_blank" rel='noreferrer'
                 href={github_client_side}
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 "
               >
                 <AiFillGithub /> <span> Client</span>
               </a>
               <a
+                target="_blank" rel='noreferrer'
                 href={github_server_side}
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 "
               >
                 <AiFillGithub /> <span> Server </span>
               </a>
               <a
+                target="_blank" rel='noreferrer'
                 href={deployed_url}
                 className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-200 "
               >
@@ -76,7 +88,7 @@ const ProjectCard: FunctionComponent<{
 
           <div>
             <h2 className="mb-3 text-xl font-medium md:text-2xl">{name}</h2>
-            <h3 className="mb-3 font-medium">{description}</h3>
+            <h3 className="mb-3 font-medium" dangerouslySetInnerHTML={createMarkup()} />
 
             <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
               {key_techs.map((tech) => (
